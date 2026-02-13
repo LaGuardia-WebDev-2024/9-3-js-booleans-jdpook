@@ -3,7 +3,7 @@ setup = function(){
     size(400, 400); 
 };
 
-var theNumber = 100;
+var theNumber = 0;
 
 //draw Function - will run repeatedly
 draw = function() {
@@ -13,12 +13,23 @@ draw = function() {
   textSize(30);
   text("Analysis of: " + theNumber, 10, 36);
 
-  text("It's positive", 10, 90);
-  text("It's negative", 10, 140);
-  text("It's zero", 10, 190);
-
+if (theNumber >0){
   noFill();
   rect(5, 60, 200, 40); 
+  text("It's positive", 10, 90);
+  }
+  if (theNumber <0){
+    noFill();
+  rect(5, 110, 200, 40); 
+  text("It's negative", 10, 140);
+  }
+  if (theNumber ==0){
+    noFill();
+  rect(5, 160, 200, 40); 
+  text("It's zero", 10, 190);
+  }
+
+
 };
 
 //draw Function - will run when mouseClicked
